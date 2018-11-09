@@ -12,6 +12,10 @@
 		BB04251D21959BBD0053C6FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB04251B21959BBD0053C6FC /* Main.storyboard */; };
 		BB04251F21959BBF0053C6FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB04251E21959BBF0053C6FC /* Assets.xcassets */; };
 		BB04252221959BBF0053C6FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB04252021959BBF0053C6FC /* LaunchScreen.storyboard */; };
+		BB0425302195C45A0053C6FC /* TTLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB04252E2195C45A0053C6FC /* TTLoadingViewController.swift */; };
+		BB0425312195C45A0053C6FC /* TTLoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB04252F2195C45A0053C6FC /* TTLoadingViewController.xib */; };
+		BB0425352195C5B90053C6FC /* TTInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0425332195C5B90053C6FC /* TTInitialViewController.swift */; };
+		BB0425362195C5B90053C6FC /* TTInitialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB0425342195C5B90053C6FC /* TTInitialViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		BB04251E21959BBF0053C6FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB04252121959BBF0053C6FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB04252321959BBF0053C6FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB04252E2195C45A0053C6FC /* TTLoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTLoadingViewController.swift; sourceTree = "<group>"; };
+		BB04252F2195C45A0053C6FC /* TTLoadingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TTLoadingViewController.xib; sourceTree = "<group>"; };
+		BB0425332195C5B90053C6FC /* TTInitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTInitialViewController.swift; sourceTree = "<group>"; };
+		BB0425342195C5B90053C6FC /* TTInitialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TTInitialViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +63,8 @@
 			isa = PBXGroup;
 			children = (
 				BB04251721959BBD0053C6FC /* AppDelegate.swift */,
+				BB0425292195C3FC0053C6FC /* LoadingViewController */,
+				BB0425322195C5880053C6FC /* InitialViewController */,
 				BB04251921959BBD0053C6FC /* ViewController.swift */,
 				BB04251B21959BBD0053C6FC /* Main.storyboard */,
 				BB04251E21959BBF0053C6FC /* Assets.xcassets */,
@@ -62,6 +72,24 @@
 				BB04252321959BBF0053C6FC /* Info.plist */,
 			);
 			path = WeatherTestTask;
+			sourceTree = "<group>";
+		};
+		BB0425292195C3FC0053C6FC /* LoadingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BB04252E2195C45A0053C6FC /* TTLoadingViewController.swift */,
+				BB04252F2195C45A0053C6FC /* TTLoadingViewController.xib */,
+			);
+			path = LoadingViewController;
+			sourceTree = "<group>";
+		};
+		BB0425322195C5880053C6FC /* InitialViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BB0425332195C5B90053C6FC /* TTInitialViewController.swift */,
+				BB0425342195C5B90053C6FC /* TTInitialViewController.xib */,
+			);
+			path = InitialViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +151,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB04252221959BBF0053C6FC /* LaunchScreen.storyboard in Resources */,
+				BB0425312195C45A0053C6FC /* TTLoadingViewController.xib in Resources */,
+				BB0425362195C5B90053C6FC /* TTInitialViewController.xib in Resources */,
 				BB04251F21959BBF0053C6FC /* Assets.xcassets in Resources */,
 				BB04251D21959BBD0053C6FC /* Main.storyboard in Resources */,
 			);
@@ -136,6 +166,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB04251A21959BBD0053C6FC /* ViewController.swift in Sources */,
+				BB0425352195C5B90053C6FC /* TTInitialViewController.swift in Sources */,
+				BB0425302195C45A0053C6FC /* TTLoadingViewController.swift in Sources */,
 				BB04251821959BBD0053C6FC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

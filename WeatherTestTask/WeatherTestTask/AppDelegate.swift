@@ -19,22 +19,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let defaults = UserDefaults.standard
         let wasAppResentlyLaunched = defaults.bool(forKey: "ResentlyLaunched")
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.backgroundColor = UIColor.white
         
         if wasAppResentlyLaunched {
-            navigateToLoadingScreen()
+           //DataManager.shared.fetchData
+           window?.rootViewController = loadingViewController()
         } else {
             defaults.set(true, forKey: "ResentlyLaunched")
-            navigateToInitialScreen()
+            window?.rootViewController = initialViewController()
         }
+        window?.makeKeyAndVisible()
         return true
     }
     
-    func navigateToInitialScreen() {
-        print("app navigates to initial screen")
+    func loadingViewController() -> UINavigationController {
+       let loadingVK = TTLoadingViewController(nibName: "TTLoadingViewController", bundle: nil)
+       return UINavigationController(rootViewController: loadingVK)
     }
     
-    func navigateToLoadingScreen() {
-         print("app navigates to loading screen")
+    func initialViewController() -> UINavigationController {
+        let initialVK = TTInitialViewController(nibName: "TTInitialViewController", bundle: nil)
+        return UINavigationController(rootViewController: initialVK)
     }
     
     
