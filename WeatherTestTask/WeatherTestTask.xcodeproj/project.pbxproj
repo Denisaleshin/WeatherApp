@@ -16,6 +16,10 @@
 		BB0425312195C45A0053C6FC /* TTLoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB04252F2195C45A0053C6FC /* TTLoadingViewController.xib */; };
 		BB0425352195C5B90053C6FC /* TTInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0425332195C5B90053C6FC /* TTInitialViewController.swift */; };
 		BB0425362195C5B90053C6FC /* TTInitialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB0425342195C5B90053C6FC /* TTInitialViewController.xib */; };
+		BBFD744D219602410070C7B9 /* TTIntermediateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFD744B219602410070C7B9 /* TTIntermediateViewController.swift */; };
+		BBFD744E219602410070C7B9 /* TTIntermediateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBFD744C219602410070C7B9 /* TTIntermediateViewController.xib */; };
+		BBFD7452219603600070C7B9 /* TTWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFD7450219603600070C7B9 /* TTWeatherViewController.swift */; };
+		BBFD7453219603600070C7B9 /* TTWeatherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBFD7451219603600070C7B9 /* TTWeatherViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		BB04252F2195C45A0053C6FC /* TTLoadingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TTLoadingViewController.xib; sourceTree = "<group>"; };
 		BB0425332195C5B90053C6FC /* TTInitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTInitialViewController.swift; sourceTree = "<group>"; };
 		BB0425342195C5B90053C6FC /* TTInitialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TTInitialViewController.xib; sourceTree = "<group>"; };
+		BBFD744B219602410070C7B9 /* TTIntermediateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTIntermediateViewController.swift; sourceTree = "<group>"; };
+		BBFD744C219602410070C7B9 /* TTIntermediateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TTIntermediateViewController.xib; sourceTree = "<group>"; };
+		BBFD7450219603600070C7B9 /* TTWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTWeatherViewController.swift; sourceTree = "<group>"; };
+		BBFD7451219603600070C7B9 /* TTWeatherViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TTWeatherViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +74,8 @@
 				BB0425292195C3FC0053C6FC /* LoadingViewController */,
 				BB0425322195C5880053C6FC /* InitialViewController */,
 				BB04251921959BBD0053C6FC /* ViewController.swift */,
+				BBFD744F2196033D0070C7B9 /* TTWeatherViewController */,
+				BBFD7448219600B00070C7B9 /* TTIntermediateViewController */,
 				BB04251B21959BBD0053C6FC /* Main.storyboard */,
 				BB04251E21959BBF0053C6FC /* Assets.xcassets */,
 				BB04252021959BBF0053C6FC /* LaunchScreen.storyboard */,
@@ -90,6 +100,24 @@
 				BB0425342195C5B90053C6FC /* TTInitialViewController.xib */,
 			);
 			path = InitialViewController;
+			sourceTree = "<group>";
+		};
+		BBFD7448219600B00070C7B9 /* TTIntermediateViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BBFD744B219602410070C7B9 /* TTIntermediateViewController.swift */,
+				BBFD744C219602410070C7B9 /* TTIntermediateViewController.xib */,
+			);
+			path = TTIntermediateViewController;
+			sourceTree = "<group>";
+		};
+		BBFD744F2196033D0070C7B9 /* TTWeatherViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BBFD7450219603600070C7B9 /* TTWeatherViewController.swift */,
+				BBFD7451219603600070C7B9 /* TTWeatherViewController.xib */,
+			);
+			path = TTWeatherViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,8 +180,10 @@
 			files = (
 				BB04252221959BBF0053C6FC /* LaunchScreen.storyboard in Resources */,
 				BB0425312195C45A0053C6FC /* TTLoadingViewController.xib in Resources */,
+				BBFD744E219602410070C7B9 /* TTIntermediateViewController.xib in Resources */,
 				BB0425362195C5B90053C6FC /* TTInitialViewController.xib in Resources */,
 				BB04251F21959BBF0053C6FC /* Assets.xcassets in Resources */,
+				BBFD7453219603600070C7B9 /* TTWeatherViewController.xib in Resources */,
 				BB04251D21959BBD0053C6FC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,6 +198,8 @@
 				BB04251A21959BBD0053C6FC /* ViewController.swift in Sources */,
 				BB0425352195C5B90053C6FC /* TTInitialViewController.swift in Sources */,
 				BB0425302195C45A0053C6FC /* TTLoadingViewController.swift in Sources */,
+				BBFD7452219603600070C7B9 /* TTWeatherViewController.swift in Sources */,
+				BBFD744D219602410070C7B9 /* TTIntermediateViewController.swift in Sources */,
 				BB04251821959BBD0053C6FC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

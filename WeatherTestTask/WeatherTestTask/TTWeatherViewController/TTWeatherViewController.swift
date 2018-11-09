@@ -1,5 +1,5 @@
 //
-//  TTInitialViewController.swift
+//  TTWeatherViewController.swift
 //  WeatherTestTask
 //
 //  Created by Dzianis Alioshyn on 11/9/18.
@@ -8,13 +8,9 @@
 
 import UIKit
 
-class TTInitialViewController: UIViewController {
+class TTWeatherViewController: UIViewController {
     
-    @IBAction func nextButtonTapped(_ sender: Any) {
-        let intermediateVK = TTIntermediateViewController(nibName: "TTIntermediateViewController", bundle: nil)
-        navigationController?.pushViewController(intermediateVK, animated: true)
-    }
-    
+    var weatherInfo: [String: String]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
