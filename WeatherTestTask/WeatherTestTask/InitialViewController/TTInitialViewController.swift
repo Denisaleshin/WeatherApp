@@ -7,35 +7,40 @@
 //
 
 import UIKit
+import CoreLocation
 
 class TTInitialViewController: UIViewController {
+    
+    let locationManager = CLLocationManager()
+    
+    @IBOutlet weak var nextButton: UIButton!
+    
     
     @IBAction func nextButtonTapped(_ sender: Any) {
         let intermediateVK = TTIntermediateViewController(nibName: "TTIntermediateViewController", bundle: nil)
         navigationController?.pushViewController(intermediateVK, animated: true)
     }
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        nextButton.isEnabled = false
+        locationManager.requestWhenInUseAuthorization()
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
     }
     
+   
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+extension TTInitialViewController: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        nextButton.isEnabled = true
+        if let location = locations.first {
+            print(location.coordinate)
+            
+        }
     }
-    */
-
 }

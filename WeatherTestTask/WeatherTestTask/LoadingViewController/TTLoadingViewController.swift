@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import CoreLocation
 
 class TTLoadingViewController: UIViewController {
+    let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(downloadingFinished), name: dataFetched, object: nil)
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startUpdatingLocation()
     }
     
     @objc func downloadingFinished(notification: NSNotification) {
@@ -22,4 +28,14 @@ class TTLoadingViewController: UIViewController {
         navigationController?.pushViewController(weatherVC, animated: true)
     }
     
+}
+
+extension TTLoadingViewController: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first {
+            print(location.coordinate)
+            
+        }
+    }
 }
