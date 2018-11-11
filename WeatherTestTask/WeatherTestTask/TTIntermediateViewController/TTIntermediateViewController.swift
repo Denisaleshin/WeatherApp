@@ -8,18 +8,16 @@
 
 import UIKit
 
-let dataFetched = Notification.Name(rawValue: "dataFetched")
-
 class TTIntermediateViewController: UIViewController {
 
     var isDataDownloaded = false
-    var weatherDictionary: [String: String]?
+    var weatherModel: TTWeather?
     
     @IBAction func okButonTapped(_ sender: Any) {
         
         if isDataDownloaded {
             let weatherVC = TTWeatherViewController(nibName: "TTWeatherViewController", bundle: nil)
-            weatherVC.weatherInfo = weatherDictionary 
+            weatherVC.weatherModel = weatherModel
             navigationController?.pushViewController(weatherVC, animated: true)
         } else {
             let loadingVC = TTLoadingViewController(nibName: "TTLoadingViewController", bundle: nil)
@@ -28,15 +26,21 @@ class TTIntermediateViewController: UIViewController {
         
     }
     
+
+    
     @objc func downloadingFinished(notification: Notification) {
-        guard let weatherInfo = notification.userInfo as? [String: String] else { return }
+        guard let weatherInfo = notification.userInfo as? [String: TTWeather] else { return }
         isDataDownloaded = true
-        weatherDictionary = weatherInfo
+        weatherModel = weatherInfo[notificationUserInfoKey]
     }
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(downloadingFinished), name: dataFetched, object: nil)
+        print("Observer added")
     }
 
     

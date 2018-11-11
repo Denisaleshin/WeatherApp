@@ -8,26 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		BB04251821959BBD0053C6FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB04251721959BBD0053C6FC /* AppDelegate.swift */; };
-		BB04251A21959BBD0053C6FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB04251921959BBD0053C6FC /* ViewController.swift */; };
-		BB04251D21959BBD0053C6FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB04251B21959BBD0053C6FC /* Main.storyboard */; };
 		BB04251F21959BBF0053C6FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB04251E21959BBF0053C6FC /* Assets.xcassets */; };
 		BB04252221959BBF0053C6FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB04252021959BBF0053C6FC /* LaunchScreen.storyboard */; };
 		BB0425302195C45A0053C6FC /* TTLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB04252E2195C45A0053C6FC /* TTLoadingViewController.swift */; };
 		BB0425312195C45A0053C6FC /* TTLoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB04252F2195C45A0053C6FC /* TTLoadingViewController.xib */; };
 		BB0425352195C5B90053C6FC /* TTInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0425332195C5B90053C6FC /* TTInitialViewController.swift */; };
 		BB0425362195C5B90053C6FC /* TTInitialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB0425342195C5B90053C6FC /* TTInitialViewController.xib */; };
+		BBC1C65D21989BA800C9F031 /* TTWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC1C65C21989BA800C9F031 /* TTWeather.swift */; };
+		BBC1C65F21989BFA00C9F031 /* TTLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC1C65E21989BFA00C9F031 /* TTLocationService.swift */; };
+		BBC1C66121989C8B00C9F031 /* TTRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC1C66021989C8B00C9F031 /* TTRequestBuilder.swift */; };
+		BBC1C66321989D0500C9F031 /* TTNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC1C66221989D0500C9F031 /* TTNetworkService.swift */; };
+		BBC1C66521989E7600C9F031 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC1C66421989E7600C9F031 /* Helpers.swift */; };
+		BBC1C6682198A11B00C9F031 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC1C6672198A11B00C9F031 /* Extentions.swift */; };
+		BBC1C66A2198AE1A00C9F031 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBC1C6692198AE1A00C9F031 /* Main.storyboard */; };
 		BBFD744D219602410070C7B9 /* TTIntermediateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFD744B219602410070C7B9 /* TTIntermediateViewController.swift */; };
 		BBFD744E219602410070C7B9 /* TTIntermediateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBFD744C219602410070C7B9 /* TTIntermediateViewController.xib */; };
 		BBFD7452219603600070C7B9 /* TTWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFD7450219603600070C7B9 /* TTWeatherViewController.swift */; };
 		BBFD7453219603600070C7B9 /* TTWeatherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBFD7451219603600070C7B9 /* TTWeatherViewController.xib */; };
 		BBFD745621961F6E0070C7B9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBFD745521961F6E0070C7B9 /* CoreLocation.framework */; };
+		BBFD745A2196C16A0070C7B9 /* TTDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFD74592196C16A0070C7B9 /* TTDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BB04251421959BBD0053C6FC /* WeatherTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB04251721959BBD0053C6FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BB04251921959BBD0053C6FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BB04251C21959BBD0053C6FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BB04251E21959BBF0053C6FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB04252121959BBF0053C6FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB04252321959BBF0053C6FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -35,11 +39,19 @@
 		BB04252F2195C45A0053C6FC /* TTLoadingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TTLoadingViewController.xib; sourceTree = "<group>"; };
 		BB0425332195C5B90053C6FC /* TTInitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTInitialViewController.swift; sourceTree = "<group>"; };
 		BB0425342195C5B90053C6FC /* TTInitialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TTInitialViewController.xib; sourceTree = "<group>"; };
+		BBC1C65C21989BA800C9F031 /* TTWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTWeather.swift; sourceTree = "<group>"; };
+		BBC1C65E21989BFA00C9F031 /* TTLocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTLocationService.swift; sourceTree = "<group>"; };
+		BBC1C66021989C8B00C9F031 /* TTRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTRequestBuilder.swift; sourceTree = "<group>"; };
+		BBC1C66221989D0500C9F031 /* TTNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTNetworkService.swift; sourceTree = "<group>"; };
+		BBC1C66421989E7600C9F031 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		BBC1C6672198A11B00C9F031 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
+		BBC1C6692198AE1A00C9F031 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		BBFD744B219602410070C7B9 /* TTIntermediateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTIntermediateViewController.swift; sourceTree = "<group>"; };
 		BBFD744C219602410070C7B9 /* TTIntermediateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TTIntermediateViewController.xib; sourceTree = "<group>"; };
 		BBFD7450219603600070C7B9 /* TTWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTWeatherViewController.swift; sourceTree = "<group>"; };
 		BBFD7451219603600070C7B9 /* TTWeatherViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TTWeatherViewController.xib; sourceTree = "<group>"; };
 		BBFD745521961F6E0070C7B9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		BBFD74592196C16A0070C7B9 /* TTDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,10 +89,15 @@
 				BB04251721959BBD0053C6FC /* AppDelegate.swift */,
 				BB0425292195C3FC0053C6FC /* LoadingViewController */,
 				BB0425322195C5880053C6FC /* InitialViewController */,
-				BB04251921959BBD0053C6FC /* ViewController.swift */,
 				BBFD744F2196033D0070C7B9 /* TTWeatherViewController */,
 				BBFD7448219600B00070C7B9 /* TTIntermediateViewController */,
-				BB04251B21959BBD0053C6FC /* Main.storyboard */,
+				BBC1C66621989FE800C9F031 /* Helpers&Extentions */,
+				BBC1C65E21989BFA00C9F031 /* TTLocationService.swift */,
+				BBC1C6692198AE1A00C9F031 /* Main.storyboard */,
+				BBFD74592196C16A0070C7B9 /* TTDataManager.swift */,
+				BBC1C66021989C8B00C9F031 /* TTRequestBuilder.swift */,
+				BBC1C66221989D0500C9F031 /* TTNetworkService.swift */,
+				BBC1C65C21989BA800C9F031 /* TTWeather.swift */,
 				BB04251E21959BBF0053C6FC /* Assets.xcassets */,
 				BB04252021959BBF0053C6FC /* LaunchScreen.storyboard */,
 				BB04252321959BBF0053C6FC /* Info.plist */,
@@ -104,6 +121,15 @@
 				BB0425342195C5B90053C6FC /* TTInitialViewController.xib */,
 			);
 			path = InitialViewController;
+			sourceTree = "<group>";
+		};
+		BBC1C66621989FE800C9F031 /* Helpers&Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				BBC1C66421989E7600C9F031 /* Helpers.swift */,
+				BBC1C6672198A11B00C9F031 /* Extentions.swift */,
+			);
+			path = "Helpers&Extentions";
 			sourceTree = "<group>";
 		};
 		BBFD7448219600B00070C7B9 /* TTIntermediateViewController */ = {
@@ -196,7 +222,7 @@
 				BB0425362195C5B90053C6FC /* TTInitialViewController.xib in Resources */,
 				BB04251F21959BBF0053C6FC /* Assets.xcassets in Resources */,
 				BBFD7453219603600070C7B9 /* TTWeatherViewController.xib in Resources */,
-				BB04251D21959BBD0053C6FC /* Main.storyboard in Resources */,
+				BBC1C66A2198AE1A00C9F031 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,9 +233,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB04251A21959BBD0053C6FC /* ViewController.swift in Sources */,
+				BBFD745A2196C16A0070C7B9 /* TTDataManager.swift in Sources */,
+				BBC1C66121989C8B00C9F031 /* TTRequestBuilder.swift in Sources */,
 				BB0425352195C5B90053C6FC /* TTInitialViewController.swift in Sources */,
+				BBC1C65F21989BFA00C9F031 /* TTLocationService.swift in Sources */,
+				BBC1C65D21989BA800C9F031 /* TTWeather.swift in Sources */,
 				BB0425302195C45A0053C6FC /* TTLoadingViewController.swift in Sources */,
+				BBC1C66521989E7600C9F031 /* Helpers.swift in Sources */,
+				BBC1C66321989D0500C9F031 /* TTNetworkService.swift in Sources */,
+				BBC1C6682198A11B00C9F031 /* Extentions.swift in Sources */,
 				BBFD7452219603600070C7B9 /* TTWeatherViewController.swift in Sources */,
 				BBFD744D219602410070C7B9 /* TTIntermediateViewController.swift in Sources */,
 				BB04251821959BBD0053C6FC /* AppDelegate.swift in Sources */,
@@ -219,14 +251,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BB04251B21959BBD0053C6FC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BB04251C21959BBD0053C6FC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BB04252021959BBF0053C6FC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

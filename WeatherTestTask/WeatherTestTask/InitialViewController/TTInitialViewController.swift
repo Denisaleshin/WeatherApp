@@ -8,10 +8,19 @@
 
 import UIKit
 import CoreLocation
+import MapKit
 
 class TTInitialViewController: UIViewController {
     
     let locationManager = CLLocationManager()
+    var currentLocation: CLLocation?
+    lazy var dataManager:TTDataManager = {
+        let locService = TTLocationService()
+        let requestBuilder = TTRequestBuilder(path: darkSkyServicePath, location: currentLocation)
+        let networkService = TTNetworkService(requestBuilder: requestBuilder)
+        let dataManager = TTDataManager(locationService: locService, networkService: networkService)
+        return dataManager
+    }()
     
     @IBOutlet weak var nextButton: UIButton!
     
@@ -19,28 +28,27 @@ class TTInitialViewController: UIViewController {
     @IBAction func nextButtonTapped(_ sender: Any) {
         let intermediateVK = TTIntermediateViewController(nibName: "TTIntermediateViewController", bundle: nil)
         navigationController?.pushViewController(intermediateVK, animated: true)
+        dataManager.fetch(currentLocation)
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         nextButton.isEnabled = false
-        locationManager.requestWhenInUseAuthorization()
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.startUpdatingLocation()
-    }
+        
+                locationManager.requestWhenInUseAuthorization()
+                    locationManager.delegate = self
+                    locationManager.desiredAccuracy = kCLLocationAccuracyBest
+                    locationManager.startUpdatingLocation()
+                    currentLocation = locationManager.location
+            }
     
-   
 }
 
 extension TTInitialViewController: CLLocationManagerDelegate {
-    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         nextButton.isEnabled = true
-        if let location = locations.first {
-            print(location.coordinate)
-            
-        }
+        manager.stopUpdatingLocation()
     }
 }
+
