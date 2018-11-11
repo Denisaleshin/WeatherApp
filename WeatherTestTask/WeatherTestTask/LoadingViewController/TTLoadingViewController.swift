@@ -11,7 +11,16 @@ import CoreLocation
 
 class TTLoadingViewController: UIViewController {
     
+    var shouldFetchData = false
     let locationManager = CLLocationManager()
+    var currentLocation: CLLocation?
+    lazy var dataManager:TTDataManager = {
+        let locService = TTLocationService()
+        let requestBuilder = TTRequestBuilder(path: darkSkyServicePath, location: currentLocation)
+        let networkService = TTNetworkService(requestBuilder: requestBuilder)
+        let dataManager = TTDataManager(locationService: locService, networkService: networkService)
+        return dataManager
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,11 +29,17 @@ class TTLoadingViewController: UIViewController {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
+        currentLocation = locationManager.location
+        
+        if shouldFetchData {
+           dataManager.fetch(currentLocation)
+        }
     }
     
     @objc func downloadingFinished(notification: NSNotification) {
-        guard let weatherInfo = notification.userInfo as? [String: String] else { return }
+        guard let weatherInfo = notification.userInfo as? [String: TTWeather] else { return }
         let weatherVC = TTWeatherViewController(nibName: "TTWeatherViewController", bundle: nil)
+        weatherVC.weatherModel = weatherInfo[notificationUserInfoKey]
         navigationController?.pushViewController(weatherVC, animated: true)
     }
     
@@ -35,10 +50,7 @@ extension TTLoadingViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         manager.stopUpdatingLocation()
         if let location = locations.first {
-            print(location.coordinate)
            
-            
-            
             }
         }
     }
