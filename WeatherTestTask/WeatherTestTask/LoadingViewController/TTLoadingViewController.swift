@@ -49,9 +49,7 @@ extension TTLoadingViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         manager.stopUpdatingLocation()
-        if let location = locations.first {
-           
-            }
-        }
     }
+    
+}
 

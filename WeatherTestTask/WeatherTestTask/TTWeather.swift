@@ -20,8 +20,6 @@ class TTWeather: Decodable {
             return "\(temp - farengeitToCelsiusTransitionRate)"
         }
     }
-        
-    
     
     enum CodingKeys: String, CodingKey {
         case currently

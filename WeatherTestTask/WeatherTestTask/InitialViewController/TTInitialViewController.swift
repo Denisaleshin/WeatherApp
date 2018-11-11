@@ -23,8 +23,7 @@ class TTInitialViewController: UIViewController {
     }()
     
     @IBOutlet weak var nextButton: UIButton!
-    
-    
+
     @IBAction func nextButtonTapped(_ sender: Any) {
         let intermediateVK = TTIntermediateViewController(nibName: "TTIntermediateViewController", bundle: nil)
         navigationController?.pushViewController(intermediateVK, animated: true)
@@ -35,14 +34,12 @@ class TTInitialViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         nextButton.isEnabled = false
-        
-                locationManager.requestWhenInUseAuthorization()
-                    locationManager.delegate = self
-                    locationManager.desiredAccuracy = kCLLocationAccuracyBest
-                    locationManager.startUpdatingLocation()
-                    currentLocation = locationManager.location
-            }
-    
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startUpdatingLocation()
+        currentLocation = locationManager.location
+    }
 }
 
 extension TTInitialViewController: CLLocationManagerDelegate {

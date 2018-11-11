@@ -43,9 +43,7 @@ class TTDataManager {
                     }
                 })
             }
-            
         }
-        
     }
     
     func postNotification(userInfo dataModel: TTWeather?) {
@@ -57,6 +55,7 @@ class TTDataManager {
             print("Notification did not post")
         }
     }
+    
 }
 
 
